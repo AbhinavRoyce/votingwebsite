@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inline Voting Site</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    .options {
+        display: flex;
+        justify-content: center;
+    }
+    .option {
+        margin: 10px;
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        cursor: pointer;
+    }
+    .option:hover {
+        background-color: #eaeaea;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Vote for Your Favorite Option</h1>
+    <div class="options">
+        <div class="option" id="option1" onclick="vote('option1')">Option 1</div>
+        <div class="option" id="option2" onclick="vote('option2')">Option 2</div>
+        <div class="option" id="option3" onclick="vote('option3')">Option 3</div>
+    </div>
+    <p id="voteResult"></p>
+</div>
+
+<script>
+    // Initialize vote counts for each option
+    let votes = {
+        option1: 0,
+        option2: 0,
+        option3: 0
+    };
+
+    // Function to handle voting
+    function vote(option) {
+        votes[option]++;
+        updateVoteResult();
+    }
+
+    // Function to update vote result text
+    function updateVoteResult() {
+        const resultElement = document.getElementById('voteResult');
+        resultElement.innerHTML = `Votes: <br>
+            Option 1: ${votes['option1']} <br>
+            Option 2: ${votes['option2']} <br>
+            Option 3: ${votes['option3']}`;
+    }
+</script>
+</body>
+</html>
