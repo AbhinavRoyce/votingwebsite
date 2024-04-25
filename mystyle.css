@@ -1,0 +1,49 @@
+.banner {
+    background-color: aqua;
+}
+
+.logo {
+    text-align: center;
+    display: inline;
+    height: 70px;
+    width: 70px;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+    border-radius: 10%;
+    background-color: #9ecbde;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.login {
+    margin: 35%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    /* length: 100px;
+    width: 300px; */
+    length: 200px;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #9ecbde;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    /* padding: 0;
+    border: 0; */
+}
